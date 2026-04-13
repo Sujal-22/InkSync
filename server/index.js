@@ -31,7 +31,7 @@ function getRoomBySocketId(socketId) {
 }
 
 // REST 
-app.get('/', (req, res) => res.send('Skribbl server running'));
+app.get('/', (req, res) => res.send('InkSync server running'));
 
 // Socket.IO 
 io.on('connection', (socket) => {

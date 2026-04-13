@@ -36,7 +36,7 @@ export default function Lobby({ player, room, onGameStart }) {
     <div className="lobby-page">
       <div className="lobby-header">
         <h1 className="lobby-logo">
-          ✏️ skribbl<span>.clone</span>
+          ✏️ InkSync
         </h1>
       </div>
 

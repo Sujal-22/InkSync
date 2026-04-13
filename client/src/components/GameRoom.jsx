@@ -201,7 +201,7 @@ export default function GameRoom({ player, room, onGameEnd }) {
       {/* Top Bar */}
       <div className="gr-topbar">
         <div className="gr-logo">
-          ✏️ skribbl<span>.clone</span>
+          ✏️ InkSync
         </div>
 
         <div className="gr-topbar-center">
