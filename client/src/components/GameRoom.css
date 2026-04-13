@@ -1,0 +1,399 @@
+.gr-page {
+    width: 100vw;
+    height: 100vh;
+    background: #1565c0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* ── Top Bar ── */
+.gr-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: #1976d2;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
+    gap: 12px;
+}
+
+.gr-logo {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.gr-logo span {
+    color: #ffc800;
+}
+
+.gr-topbar-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    flex: 1;
+}
+
+.gr-round-info {
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.gr-round-info strong {
+    color: #fff;
+}
+
+.gr-drawer-info {
+    font-size: 0.9rem;
+    color: #a8dadc;
+    font-weight: 600;
+}
+
+.gr-hint-display {
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 6px;
+    min-height: 28px;
+}
+
+.gr-word-reveal {
+    color: #ffc800;
+    text-transform: capitalize;
+}
+
+.gr-word-blanks {
+    color: #fff;
+}
+
+/* ── Timer ── */
+.gr-timer-box {
+    position: relative;
+    width: 80px;
+    height: 36px;
+    border-radius: 8px;
+    border: 2px solid #4caf50;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: rgba(0, 0, 0, 0.2);
+    transition: border-color 0.5s;
+}
+
+.gr-timer-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    opacity: 0.2;
+    transition: width 1s linear, background 0.5s;
+}
+
+.gr-timer-text {
+    position: relative;
+    font-size: 1rem;
+    font-weight: 800;
+    transition: color 0.5s;
+}
+
+/* ── Body Layout ── */
+.gr-body {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* ── Sidebar ── */
+.gr-sidebar {
+    width: 175px;
+    flex-shrink: 0;
+    background: #1565c0;
+    border-right: 2px solid rgba(255, 255, 255, 0.08);
+    overflow-y: auto;
+    padding: 10px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.gr-player {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 8px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.gr-player.me {
+    border-color: #ffc800;
+    background: rgba(255, 200, 0, 0.08);
+}
+
+.gr-player.drawing {
+    border-color: #4caf50;
+    background: rgba(76, 175, 80, 0.08);
+}
+
+.gr-player.guessed {
+    border-color: rgba(76, 175, 80, 0.3);
+}
+
+.gr-player-rank {
+    font-size: 0.65rem;
+    color: rgba(255, 255, 255, 0.4);
+    width: 16px;
+    flex-shrink: 0;
+}
+
+.gr-player-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    flex-shrink: 0;
+}
+
+.gr-player-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+
+.gr-player-name {
+    font-size: 0.75rem;
+    color: #fff;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.gr-you {
+    color: #ffc800;
+    font-size: 0.65rem;
+}
+
+.gr-player-score {
+    font-size: 0.68rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.gr-player-status {
+    font-size: 0.75rem;
+}
+
+/* ── Canvas Area ── */
+.gr-canvas-area {
+    flex: 1;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background: #1565c0;
+}
+
+/* ── Chat Area ── */
+.gr-chat-area {
+    width: 260px;
+    flex-shrink: 0;
+    padding: 12px 12px 12px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ── Overlay Cards ── */
+.gr-overlay-card {
+    background: #1976d2;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    min-width: 360px;
+    max-width: 520px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* ── Word Choice ── */
+.gr-pencil {
+    font-size: 3rem;
+}
+
+.gr-choose-title {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.gr-choose-sub {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
+}
+
+.gr-word-options {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gr-word-btn {
+    padding: 14px 28px;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 200, 0, 0.4);
+    background: rgba(255, 200, 0, 0.1);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: capitalize;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.gr-word-btn:hover {
+    background: #ffc800;
+    border-color: #ffc800;
+    color: #1a237e;
+    transform: translateY(-2px);
+}
+
+/* ── Round End ── */
+.gr-round-title {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.gr-round-word {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+}
+
+.gr-round-word strong {
+    color: #ffc800;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+}
+
+.gr-next-hint {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.82rem;
+    font-style: italic;
+}
+
+/* ── Leaderboard ── */
+.gr-leaderboard {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.gr-lb-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 2px solid transparent;
+}
+
+.gr-lb-row.first {
+    background: rgba(255, 200, 0, 0.1);
+    border-color: rgba(255, 200, 0, 0.3);
+}
+
+.gr-lb-rank {
+    font-size: 1.1rem;
+    width: 32px;
+    text-align: center;
+}
+
+.gr-lb-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    flex-shrink: 0;
+}
+
+.gr-lb-name {
+    flex: 1;
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.gr-lb-score {
+    color: #4caf50;
+    font-weight: 800;
+    font-size: 0.95rem;
+}
+
+/* ── Game Over ── */
+.gr-trophy {
+    font-size: 4rem;
+}
+
+.gr-over-title {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.gr-over-winner {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+}
+
+.gr-over-winner strong {
+    color: #ffc800;
+    font-size: 1.3rem;
+}
+
+.gr-home-btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    background: #4caf50;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 0 #388e3c;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.gr-home-btn:hover {
+    background: #43a047;
+    transform: translateY(-1px);
+}
